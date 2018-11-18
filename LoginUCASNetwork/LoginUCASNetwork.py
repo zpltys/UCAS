@@ -96,7 +96,7 @@ def login(userId, password):
     try:
         fh = urlopen(loginUrl)
         # 不加下面的这句会出错
-        time.sleep(0.1)
+        time.sleep(0.001)
         html = fh.read().decode("utf8")
         result = json.loads(html)
         if result['result'] != 'success':
